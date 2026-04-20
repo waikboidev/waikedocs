@@ -76,10 +76,10 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          href: 'https://fixes.waike.dev/',
+          label: 'Fixes',
           position: 'left',
-          label: 'Docs',
+          className: 'navbar__link--external',
         },
       ],
     },

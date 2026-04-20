@@ -12,8 +12,11 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   const controls = useAnimation();
   const history = useHistory();
+  const animating = useRef(false);
 
   async function handleClick() {
+    if (animating.current) return;
+    animating.current = true;
     await controls.start({
       scale: [1, 1.15, 30],
       opacity: [1, 1, 0],
@@ -47,15 +50,16 @@ function HomepageHeader() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
         >
-          <motion.button
-            className={styles.ctaButton}
-            animate={controls}
-            onClick={handleClick}
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            Browse the Docs
-          </motion.button>
+          <motion.div animate={controls}>
+            <motion.button
+              className={styles.ctaButton}
+              onClick={handleClick}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Browse the Docs
+            </motion.button>
+          </motion.div>
         </motion.div>
       </div>
     </header>
