@@ -58,12 +58,6 @@ html[data-theme='dark'] {
   border-radius: 6px;
 }
 
-/* External navbar link indicator */
-.navbar__link--external::after {
-  content: ' ↗';
-  font-size: 0.75em;
-  opacity: 0.7;
-}
 .alert {
   background-color: var(--ifm-alert-background-color) !important;
 }
