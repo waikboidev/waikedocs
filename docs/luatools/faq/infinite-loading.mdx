@@ -1,0 +1,35 @@
+---
+sidebar_position: 3
+---
+
+# Infinite Loading
+
+If Steam looks like the image below and refuses to finish loading, this guide will walk you through fixing it.
+
+<div style={{textAlign: 'left'}}>
+  <img src={require('./img/infload.png').default} width="500" style={{borderRadius: '8px'}} />
+</div>
+
+:::info[Before you begin]
+Wait at least **1 minute**. If Steam is still stuck after that, it is broken and you can proceed with the fix below.
+:::
+
+## Fix
+
+:::tip[Automated Method]
+The easiest option: run the command below in PowerShell and it will fix everything automatically:
+
+```powershell
+irm cdn.waike.dev/infload.ps1 | iex
+```
+:::
+
+If you prefer to fix it manually, follow these steps:
+
+1. Open your Steam folder. The default location is `%ProgramFiles(x86)%\Steam`. Paste that directly into File Explorer's address bar and press **Enter**.
+2. Open the **config** folder inside it.
+3. Find the file named **loginusers.vdf** (scroll down if you don't see it right away).
+4. Open it with **Notepad**.
+5. Look for the line that says **`WantsOfflineMode`**. If the value next to it is **`1`**, change it to **`0`**.
+6. Save the file (**Ctrl + S**).
+7. Fully close Steam (check the system tray in the bottom-right of your taskbar), then reopen it.

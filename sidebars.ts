@@ -13,9 +13,10 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
  Create as many sidebars as you want.
  */
 const sidebars: SidebarsConfig = {
-  tutorialSidebar: [
+  mainSidebar: [
     'luatools/faq/luatools-menu',
     'luatools/faq/powershell-error',
+    'luatools/faq/infinite-loading'
   ],
 };
 
