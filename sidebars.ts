@@ -17,7 +17,8 @@ const sidebars: SidebarsConfig = {
     'luatools/faq/luatools-menu',
     'luatools/faq/powershell-error',
     'luatools/faq/infinite-loading',
-    'luatools/faq/hardlink-error'
+    'luatools/faq/hardlink-error',
+    'luatools/faq/purchase-error'
   ],
 };
 
